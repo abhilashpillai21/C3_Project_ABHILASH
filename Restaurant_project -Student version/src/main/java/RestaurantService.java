@@ -6,8 +6,11 @@ public class    RestaurantService {
     private static List<Restaurant> restaurants = new ArrayList<>();
 
     public Restaurant findRestaurantByName(String restaurantName){
+        for(Restaurant restaurant : restaurants){
+            if(restaurant.getName().equalsIgnoreCase(restaurantName))
+                return restaurant;
+        }
         return null;
-        //DELETE ABOVE STATEMENT AND WRITE CODE HERE
     }
 
 
